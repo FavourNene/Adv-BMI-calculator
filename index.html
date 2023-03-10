@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form id="form">
+      <h1>Check your BMI</h1>
+      <label>HEIGHT:</label>
+      <input
+        type="text"
+        id="height-input"
+        name="height-input-field"
+        id="heightValue"
+        required
+        placeholder="Please select a unit first"
+      />
+      <input type="text" name="hidden" id="inches" placeholder="inches" />
+
+      <select
+        name="height-options"
+        id="height-unit"
+        onchange="showField()"
+        ;
+        onclick="changeH()"
+        ;
+        on
+      >
+        <option disabled hidden selected>units</option>
+        <option value="centimetres">Centimetres</option>
+        <option value="feet-inches">Feet</option>
+        <option value="metres">Metres</option>
+      </select>
+
+      <br />
+      <label>WEIGHT:</label>
+      <input
+        type="text"
+        id="weight-input"
+        name="weight-input-field"
+        required
+        id="weightInput"
+        placeholder="Please select a unit first"
+      />
+      <select
+        name="weight-options"
+        id="weight-unit"
+        onclick="change()"
+        ;
+        onchange="getOption();"
+      >
+        <option disabled hidden selected>units</option>
+        <option value="kilograms" id="kg">Kilograms</option>
+        <option value="pounds" id="lb">Pounds</option>
+      </select>
+      <br />
+      <button id="calculate">CALCULATE</button>
+      <br />
+      <label id="result"></label>
+
+      <label id="info"></label>
+      <br />
+      <button type="reset" id="reset">RESET</button>
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>
